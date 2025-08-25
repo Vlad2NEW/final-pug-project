@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h1 About This Project
+  p Ця сторінка описує проєкт.
+  
+  //- Використання умов
+  - var isActive = true
+  if isActive
+    p Статус проекту: Активний
+  else
+    p Статус проекту: Неактивний

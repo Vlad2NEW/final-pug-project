@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+  h1 Welcome to My Final Pug Project
+  p Це головна сторінка проекту.
+  
+  //- Використання циклу
+  h2 Наші тварини
+  ul
+    - var pets = ['Cat', 'Dog', 'Rabbit', 'Pig']
+    each pet in pets
+      li.pet= pet
+
+  //- Міксина для списку
+  mixin itemList(...items)
+    ul
+      each item in items
+        li= item
+
+  +itemList('Apple', 'Banana', 'Orange')
